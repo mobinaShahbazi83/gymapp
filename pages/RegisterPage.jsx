@@ -4,15 +4,7 @@ import { GoChevronDown } from "react-icons/go";
 function RegisterPage() {
   return (
     <div className="flex justify-center h-screen overflow-hidden">
-      <div className="
-          w-[600px] h-screen
-          bg-[#D0E4FF]
-          border border-[#289DFC30]
-          rounded-2xl
-          box-border
-          flex
-          flex-col
-          px-6 sm:px-12">
+      <div className=" w-[600px] h-screen bg-[#D0E4FF] border border-[#289DFC30] rounded-2xl box-border flex flex-col px-6 sm:px-12">
              <CgGym className="text-[#0F67FE] mt-10 mr-45 w-[120px] h-[120px]"/>
              <div className="mr-4 mt-6">
                 <h1 className="text-xl !font-bold ">ثبت نام</h1>
