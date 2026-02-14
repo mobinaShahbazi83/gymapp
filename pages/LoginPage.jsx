@@ -33,13 +33,13 @@ function LoginPage() {
           <label className="text-center w-full max-w-[300px]">شماره همراه</label>
           <input
             type="text"
-            className=" w-full max-w-[350px] h-[50px] bg-[#D0E4FF] border border-[#000000] rounded-2xl px-4"
+            className=" w-full max-w-[350px] h-[50px] bg-[#D0E4FF] outline-none hover:border-[#289DFC] border border-[#000000]  rounded-2xl px-4"
           />
         </div>
 
         <div className="w-full flex flex-col items-center gap-2 mt-6">
           <button
-            className=" w-full max-w-[350px] h-[50px] bg-[#289DFC] border border-[#289DFC] rounded-2xl text-[#FFFFFF] text-xl"
+            className=" w-full max-w-[350px] h-[50px] bg-[#289DFC] border border-[#289DFC] outline-none hover:border-[#289DFC] rounded-2xl text-[#FFFFFF] text-xl"
           >
             تایید
           </button>
