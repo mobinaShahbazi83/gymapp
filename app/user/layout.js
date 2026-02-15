@@ -1,8 +1,10 @@
+import UserLayout from "../../layouts/UserLayout"
 
-
-function layout() {
+function layout({children}) {
   return (
-    <div>layout</div>
+   <UserLayout>
+    {children}
+    </UserLayout>
   )
 }
 
