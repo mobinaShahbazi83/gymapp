@@ -4,17 +4,12 @@ import { CiDumbbell } from "react-icons/ci";
 import { LuDumbbell } from "react-icons/lu";
 import { GiHighKick } from "react-icons/gi";
 import { GiBrain } from "react-icons/gi";
-import { RiDiscountPercentLine } from "react-icons/ri";
-import { FaEnvelope } from "react-icons/fa";
-import { SlHome } from "react-icons/sl";
-import { MdOutlinePayment } from "react-icons/md";
-import { BiSupport } from "react-icons/bi";
 
 
 
 function HomePage() {
   return (
-    <div className="flex justify-center h-screen overflow-hidden">
+    <div className="flex justify-center">
       <div
         className="
           w-[600px]
@@ -69,36 +64,6 @@ function HomePage() {
           </div>
            <div className="flex justify-center mt-13 ">
           <img src="./images/Frame.png" className="w-full h-[190px] rounded-3xl"/>
-        </div>
-        <div>
-          <div className="flex justify-center mt-12 gap-8">
-
-              <div className="w-[64px] h-[64px] bg-[#7EBFBD]  rounded-3xl pt-3 pr-3 pl-5">
-                 <BiSupport className="w-[40px] h-[37px] text-[#FFFFFF]" />
-                <p className="text-base mt-5 m font-normal text-[#000000]">پشتیبانی</p>
-              </div>
-
-
-              <div className="w-[64px] h-[64px] bg-[#D28A48]  rounded-3xl pt-3 pr-3 pl-5">
-                 <MdOutlinePayment className="w-[40px] h-[37px] text-[#FFFFFF]"/>
-                <p className="text-base mt-5 m font-normal text-[#000000]">پرداخت</p>
-              </div>
-                          <div className="w-[64px] h-[64px] bg-[#289DFC]  rounded-3xl pt-3 pr-3 pl-5">
-                <SlHome className="w-[40px] h-[37px] text-[#FFFFFF]"/>
-                <p className="text-base mt-5 m font-normal text-[#000000]">خانه</p>
-              </div>
-            
-              <div className="w-[64px] h-[64px] bg-[#9D9ED6]  rounded-3xl pt-3 pr-3 pl-5">
-                <FaEnvelope className="w-[40px] h-[37px] text-[#FFFFFF]"/>
-                  <p className="text-base mt-5 m font-normal text-[#000000]">پیام‌ها</p>
-              </div>
-             
-              <div className="w-[64px] h-[64px] bg-[#EF5DA8]  rounded-3xl pt-3 pr-3 pl-5">
-                  <RiDiscountPercentLine className="w-[40px] h-[37px] text-[#FFFFFF]"/>
-                  <p className="text-base mt-5 m font-normal text-[#000000]">تخفیف‌ها</p>
-              </div>
-             
-          </div>
         </div>
       </div>
     </div>
