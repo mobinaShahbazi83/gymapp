@@ -19,10 +19,10 @@ function AuthPage() {
         <div className="absolute inset-0 bg-[#289DFC30]" />
 
         <div className="relative z-10 flex flex-col items-center gap-5  ">
-          <button className="w-[303px] h-[47px] bg-[#289DFC] text-[#000000] border border-[#289DFC] rounded-xl ">
+          <button className="w-[303px] h-[47px] bg-[#289DFC] !font-bold text-[#000000] border border-[#289DFC] rounded-xl ">
             ثبت نام
           </button>
-          <button className="w-[303px] h-[47px] bg-[#289DFC] text-[#000000] border border-[#289DFC] rounded-xl">
+          <button className="w-[303px] h-[47px] bg-[#289DFC] !font-bold text-[#000000] border border-[#289DFC] rounded-xl">
             ورود
           </button>
          <button 
@@ -32,6 +32,7 @@ function AuthPage() {
           bg-white
           text-black
           border border-white
+          !font-bold
           rounded-xl
           flex
           flex-row-reverse
