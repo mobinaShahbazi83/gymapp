@@ -1,8 +1,11 @@
+import HeaderGym from "../components/layout/gym/Header"
 
 
-function GymLayout() {
+function GymLayout({children}) {
   return (
-    <div>GymLayout</div>
+   <HeaderGym>
+    {children}
+   </HeaderGym>
   )
 }
 
