@@ -2,9 +2,7 @@ import HomePageGym from "../../pages/HomePageGym"
 
 
 function page() {
-  return (
-     <HomePageGym/>
-  )
+  return (<HomePageGym/>)
 }
 
 export default page

@@ -2,17 +2,16 @@
 
 function HomePageGym() {
   return (
-    <div className="w-full">
-      <div className="flex justify-center">
-     <div className="
-            w-[600px]
-            min-h-screen
+    <div>
+      <div className=" w-full
+            h-[1110px]
             flex flex-col
-            bg-gray-50
-            rounded-2xl
+            bg-[#EBEBEB]
+            rounded-lg
             box-border
             px-6 sm:px-12
             pt-6">
+     <div>
 
      </div>
       </div>

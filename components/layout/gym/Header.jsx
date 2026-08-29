@@ -1,29 +1,28 @@
 import { GoListUnordered } from "react-icons/go";
-import { GoChevronLeft } from "react-icons/go";
-
+import { CiLogout } from "react-icons/ci";
 
 function HeaderGym() {
   return (
-    <div className="flex flex-col items-center rounded-b-lg pb-5">
-      <div className="w-[600px] h-[45px] flex">
-        <div className="flex justify-between w-full">
-          
-          <div className="flex mt-4 gap-2">
-            <GoListUnordered className="w-[35px] h-[35px] text-[#3B3B3B]" />
-            <h1 className="!font-semibold text-2xl">فیتنو</h1>
-          </div>
+    <div className="w-full px-6 py-4">
+      <div className="w-full flex justify-between items-center">
 
-          <div className="flex mt-4 gap-2">
-            <h2 className="!font-medium text-1xl mt-2">ورود و خروج</h2>
-            <div className="w-[40px] h-[40px] rounded-4xl bg-[#50505033] pt-2 pr-2">
-              <GoChevronLeft className="w-[25px] h-[22px]" />
-            </div>
-          </div>
-
+        {/* سمت چپ Header */}
+        <div className="w-[40px] h-[40px] rounded-full bg-[#50505033] flex items-center justify-center">
+          < CiLogout className="w-[25px] h-[22px]" />
         </div>
+
+        {/* سمت راست Header */}
+        <div className="flex items-center gap-2">
+          <h1 className="!font-semibold text-2xl">
+            فیتنو
+          </h1>
+
+          <GoListUnordered className="w-[35px] h-[35px] text-[#3B3B3B]" />
+        </div>
+
       </div>
     </div>
-  )
+  );
 }
 
-export default HeaderGym
+export default HeaderGym;
