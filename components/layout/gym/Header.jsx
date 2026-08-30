@@ -3,7 +3,7 @@ import { CiLogout } from "react-icons/ci";
 
 function HeaderGym() {
   return (
-    <div className="w-full px-6 py-4">
+    <div className="w-full h-[80px] bg-[#EFEFEF] px-6 py-4 rounded-b-4xl ">
       <div className="w-full flex justify-between items-center">
 
         {/* سمت چپ Header */}
