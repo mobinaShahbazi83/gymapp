@@ -16,14 +16,14 @@ function Sidebar() {
   return (
     <div className="w-full min-h-screen bg-[#289DFC] rounded-l-4xl">
       <div className="flex flex-col ">
-        <div className="flex  justify-center mt-6 gap-1 ml-7">
+        <div className="flex  justify-center mt-8 gap-1 ml-7">
           <h1 className="!font-normal text-base mt-4">فیتنو</h1>
             <img
               src="./images/Dumbbell.png"
               className="w-[100px] h-[100pxpx] rounded-4xl"
             />
         </div>
-        <div className="flex  justify-end mt-10 gap-2 mr-3 ">
+        <div className="flex  justify-end mt-15 gap-2 mr-3 ">
           <p className="!font-normal text-sm mt-1">مدیریت کارکنان</p>
           <IoSettings className="w-[30px] h-[30px]" />
         </div>
@@ -34,10 +34,6 @@ function Sidebar() {
         <div className="flex  justify-end mt-6 gap-2 mr-3 ">
           <p className="!font-normal text-sm mt-1">افزودن کاربر</p>
           <IoPersonAddOutline  className="w-[30px] h-[30px]" />
-        </div>
-         <div className="flex  justify-end mt-6 gap-2 mr-2 ">
-          <p className="!font-normal text-sm mt-1">اعضای باشگاه</p>
-          <IoWalkSharp  className="w-[30px] h-[30px]" />
         </div>
          <div className="flex  justify-end mt-6 gap-2 mr-2 ">
           <p className="!font-normal text-sm mt-1">اعضای باشگاه</p>
@@ -75,7 +71,7 @@ function Sidebar() {
           <p className="!font-normal text-sm mt-1">اطلاعیه‌ها</p>
           <FiRadio     className="w-[30px] h-[30px]" />
       </div>
-      <div className="flex  justify-center mt-10 gap-2 ml-7">
+      <div className="flex  justify-center mt-15 gap-2 ml-7">
           <h2 className="!font-normal text-base mt-4">خروج از حساب</h2>
            <IoLogOutOutline className="w-[30px] h-[30px] mt-4" />
         </div>
