@@ -102,6 +102,7 @@ function MessagesgymPage() {
             </p>
           </div>
         </div>
+        
       </div>
     </div>
   );
