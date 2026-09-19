@@ -17,7 +17,7 @@ function PerformancereportPage() {
                     <MdOutlinePhotoCamera className="w-[40px] h-[40px] text-[#668CAE]" />
                 </div>
             </div>
-            <h2 className="!font-bold text-lg flex justify-end m-5">:گزارش گیری درآمد</h2>
+            <h2 className="!font-bold text-lg flex justify-center m-5">:گزارش گیری درآمد</h2>
             <div className="flex flex-col justify-end ">
                 <div className="flex justify-end mt-5 mx-auto gap-20 text-right">
                     <div className="w-[380px] h-[70px] bg-[#F5F6F8] rounded-4xl pt-2 pr-3">
@@ -63,10 +63,10 @@ function PerformancereportPage() {
                 </div>
             </div>
             <div className="flex justify-between items-center w-full px-15 mt-10">
-                <div className="w-[200px] h-[54px] bg-[#F5F6F8] rounded-4xl !font-semibold text-lg pt-3 pl-6">
+                <div className="w-[200px] h-[54px] bg-[#F5F6F8] rounded-4xl !font-semibold text-lg pt-3 pl-6 ml-17">
                     دریافت خروجی اکسل
                 </div>
-                <div className="flex justify-end gap-5">
+                <div className="flex justify-end gap-5 mr-15">
 
                     <div className="w-[200px] h-[54px] bg-[#F5F6F8] rounded-4xl !font-semibold text-lg pt-3 pl-10">
                         از تاریخ: ۱۴۰۴/۰۲/۰۲
