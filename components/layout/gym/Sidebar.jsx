@@ -19,7 +19,7 @@ function Sidebar() {
         <div className="flex  justify-center mt-8 gap-1 ml-7">
           <h1 className="!font-normal text-base mt-4">فیتنو</h1>
             <img
-              src="./images/Dumbbell.png"
+              src="/images/Dumbbell.png"
               className="w-[100px] h-[100pxpx] rounded-4xl"
             />
         </div>
