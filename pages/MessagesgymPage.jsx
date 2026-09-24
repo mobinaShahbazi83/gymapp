@@ -1,11 +1,14 @@
+"use client";
 import { MdOutlinePhotoCamera } from "react-icons/md";
 import { GoPencil } from "react-icons/go";
-import { IoPersonAddOutline } from "react-icons/io5";
+import { BiMessageAdd } from "react-icons/bi";
 import { GoChevronLeft } from "react-icons/go";
 import { IoTrashOutline } from "react-icons/io5";
 import { CiEdit } from "react-icons/ci";
+import { useState } from "react";
 
 function MessagesgymPage() {
+  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   return (
     <div className="w-full h-[1110px]">
       <div className="flex justify-end items-center gap-8 mt-8 mr-10">
@@ -24,12 +27,63 @@ function MessagesgymPage() {
           :لیست پیام‌ها
         </p>
         <div className="flex items-center gap-2">
-          <div className="w-[181px] h-[40px] bg-[#0088FF] rounded-4xl flex items-center justify-center gap-4">
-            <IoPersonAddOutline className="w-[22px] h-[22px] text-white" />
+          <button
+            onClick={() => setIsAddModalOpen(true)}
+            className="w-[181px] h-[40px] bg-[#0088FF] rounded-4xl flex items-center justify-center gap-4 cursor-pointer"
+          >
+            <BiMessageAdd className="w-[22px] h-[22px] text-white" />
+
             <p className="!font-semibold text-lg text-white">
-              سانس جدید
+              افزودن
             </p>
-          </div>
+          </button>
+
+          {isAddModalOpen && (
+            <div
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/40"
+              onClick={() => setIsAddModalOpen(false)}
+            >
+              <div
+                dir="rtl"
+                className="relative w-[500px] min-h-[400px] bg-white rounded-3xl shadow-xl"
+                onClick={(e) => e.stopPropagation()}
+              >
+
+                <button
+                  onClick={() => setIsAddModalOpen(false)}
+                  className="absolute top-4 left-4 text-3xl text-[#FF0000BD] hover:text-black cursor-pointer"
+                >
+                  ×
+                </button>
+
+                <h2 className="!font-semibold text-lg flex justify-center mt-10">فرم افزودن اطلاعیه</h2>
+                <input
+                  placeholder="موضوع اطلاعیه:"
+                  className="w-[200px] h-[45px]  rounded-4xl bg-[#B9E0F5] border border-[#B9E0F5] outline-none mt-5 mr-3 p-1 !font-medium text-1xg "
+                />
+                <div className="flex">
+                  <textarea
+                    placeholder="تاریخ شروع:"
+                    className="w-[200px] h-[45px]  rounded-4xl bg-[#C4C4C4] border border-[#C4C4C4] outline-none mt-3 mr-3 p-1 !font-bold text-lg "
+                  />
+                  <textarea
+                    placeholder="تاریخ پایان: "
+                    className="w-[200px] h-[45px]  rounded-4xl bg-[#C4C4C4] border border-[#C4C4C4] outline-none mt-3 mr-3 p-1 !font-bold text-lg "
+                  />
+                </div>
+                <textarea
+                  placeholder="توضیحات تکمیلی:"
+                  className="w-[480px] h-[110px] rounded-4xl bg-[#B9E0F5] border border-[#B9E0F5] outline-none mt-3 mr-1 px-5 pt-1 !font-bold text-lg resize-none"
+                />
+                <div className="flex justify-end ml-5 mt-2 ">
+                  <button
+                    className="w-[150px] h-[45px] rounded-4xl bg-[#289DFC] border border-[#289DFC] text-[#FFFFFF] !font-medium text-1xg  "
+                  >افزودن</button>
+                </div>
+
+              </div>
+            </div>
+          )}
           <input
             placeholder="جستجو"
             className="text-lg text-right pb-2 pr-3 w-[510px] h-[40px] bg-[#F4F4F4D9] rounded-4xl border border-[#289DFC] outline-none"
@@ -57,7 +111,7 @@ function MessagesgymPage() {
                 <IoTrashOutline className="w-[25px] h-[25px] text-[#2563EB]" />
                 <CiEdit className="w-[27px] h-[27px] text-[#2563EB]" />
               </div>
-               <p className="text-base !font-normal">
+              <p className="text-base !font-normal">
                 خلاصه‌ای از اطلاعیه سیستمی اینجا نوشته شد.
               </p>
             </div>
@@ -65,7 +119,7 @@ function MessagesgymPage() {
               ۱۴۰۳/۰۲/۰۲ | ساعت ۱۰:۴۵
             </p>
           </div>
-           <div className="w-[1300px] h-[130px]  ml-auto  flex flex-col text-right mr-10 mt-3">
+          <div className="w-[1300px] h-[130px]  ml-auto  flex flex-col text-right mr-10 mt-3">
             <h1 className="!font-semibold text-lg">
               عنوان پیام یا اعلانیه
             </h1>
@@ -75,7 +129,7 @@ function MessagesgymPage() {
                 <IoTrashOutline className="w-[25px] h-[25px] text-[#2563EB]" />
                 <CiEdit className="w-[27px] h-[27px] text-[#2563EB]" />
               </div>
-               <p className="text-base !font-normal">
+              <p className="text-base !font-normal">
                 خلاصه‌ای از اطلاعیه سیستمی اینجا نوشته شد.
               </p>
             </div>
@@ -83,7 +137,7 @@ function MessagesgymPage() {
               ۱۴۰۳/۰۲/۰۲ | ساعت ۱۰:۴۵
             </p>
           </div>
-           <div className="w-[1300px] h-[130px]  ml-auto  flex flex-col text-right mr-10 mt-3">
+          <div className="w-[1300px] h-[130px]  ml-auto  flex flex-col text-right mr-10 mt-3">
             <h1 className="!font-semibold text-lg">
               عنوان پیام یا اعلانیه
             </h1>
@@ -93,7 +147,7 @@ function MessagesgymPage() {
                 <IoTrashOutline className="w-[25px] h-[25px] text-[#2563EB]" />
                 <CiEdit className="w-[27px] h-[27px] text-[#2563EB]" />
               </div>
-               <p className="text-base !font-normal">
+              <p className="text-base !font-normal">
                 خلاصه‌ای از اطلاعیه سیستمی اینجا نوشته شد.
               </p>
             </div>
@@ -102,7 +156,7 @@ function MessagesgymPage() {
             </p>
           </div>
         </div>
-        
+
       </div>
     </div>
   );
