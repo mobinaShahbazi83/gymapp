@@ -61,6 +61,7 @@ function MessagesgymPage() {
                   placeholder="موضوع اطلاعیه:"
                   className="w-[200px] h-[45px]  rounded-4xl bg-[#B9E0F5] border border-[#B9E0F5] outline-none mt-5 mr-3 p-1 !font-medium text-1xg "
                 />
+               
                 <div className="flex">
                   <textarea
                     placeholder="تاریخ شروع:"
