@@ -43,6 +43,7 @@ function EntryExitPage() {
         <h2 className="!font-semibold text-lg">:ورود و خروج</h2>
         <div className="flex items-center gap-2">
           <div className="w-[200px] h-[50px] bg-[#0088FF] rounded-4xl flex items-center justify-center gap-4">
+            
             <TbCircleDashedCheck className="w-[30px] h-[30px] text-white" />
             <p className="!font-semibold text-lg text-white">
               ثبت ورود
