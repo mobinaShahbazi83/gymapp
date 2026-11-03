@@ -5,8 +5,10 @@ import { GoChevronDown } from "react-icons/go";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoPersonAddOutline } from "react-icons/io5";
 import { useState } from "react";
+import {  IoClose } from "react-icons/io5";
 
 function AdmingymPage() {
+    const [showModal, setShowModal] = useState(false);
     
     const [rows, setRows] = useState([
         { id: 1, name: "مریم فتحی", description: "این یک نوشته آزمایشی برای اعمال تغییرات در سیستم می‌باشد.", date: "آزمایشی", status: "آزمایشی" },
@@ -69,21 +71,141 @@ function AdmingymPage() {
                     </div>
                     <h2 className="!font-semibold text-lg">:لیست تغییرات</h2>
                 </div>
-                <div className="flex items-center gap-2">
-                    <div className="w-[200px] h-[50px] bg-[#0088FF] rounded-4xl flex items-center justify-center gap-4">
-                        <IoPersonAddOutline className="w-[30px] h-[30px] text-white" />
-                        <p className="!font-semibold text-lg text-white">
-                            ادمین جدید
-                        </p>
-                    </div>
-                    <div className="flex justify-center mt- gap-5">
-                        <input
-                            placeholder=".جستجو کنید"
-                            className="w-[950px] h-[50px] bg-[#9595951C] border border-[#9595951C] outline-none rounded-4xl !font-semibold text-lg text-right p-4" />
-                        <div className="w-[57px] h-[50px] bg-[#9595951C] border border-[#9595951C] rounded-3xl"><IoSearchOutline className="w-[25px] h-[25px] mt-3 ml-4 text-[#0088FF] " /></div>
-                    </div>
+               <div className="flex items-center gap-2">
 
+    {/* دکمه ادمین جدید */}
+    <button
+        onClick={() => setShowModal(true)}
+        className="w-[200px] h-[50px] bg-[#0088FF] rounded-4xl flex items-center justify-center gap-4 cursor-pointer"
+    >
+        <IoPersonAddOutline className="w-[30px] h-[30px] text-white" />
+
+        <p className="!font-semibold text-lg text-white">
+            ادمین جدید
+        </p>
+    </button>
+
+    {/* جستجو */}
+    <div className="flex justify-center gap-5">
+        <input
+            placeholder=".جستجو کنید"
+            className="w-[950px] h-[50px] bg-[#9595951C] border border-[#9595951C] outline-none rounded-4xl !font-semibold text-lg text-right p-4"
+        />
+
+        <div className="w-[57px] h-[50px] bg-[#9595951C] border border-[#9595951C] rounded-3xl flex items-center justify-center">
+            <IoSearchOutline className="w-[25px] h-[25px] text-[#0088FF]" />
+        </div>
+    </div>
+
+</div>
+
+
+{/* مودال ثبت ادمین */}
+{showModal && (
+
+    <div
+        className="fixed inset-0 z-50 bg-black/40 flex items-center justify-center p-4"
+        onClick={() => setShowModal(false)}
+    >
+
+        <div
+            className="w-[550px] bg-white rounded-3xl p-7 shadow-xl"
+            dir="rtl"
+            onClick={(e) => e.stopPropagation()}
+        >
+
+            {/* عنوان و ضربدر */}
+            <div className="flex items-center justify-between mb-8">
+
+                <h2 className="text-xl !font-semibold">
+                    ثبت ادمین جدید
+                </h2>
+
+                <button
+                    onClick={() => setShowModal(false)}
+                    className="w-9 h-9 flex items-center justify-center rounded-full hover:bg-gray-100"
+                >
+                    <IoClose className="w-7 h-7 text-[#FF5252]" />
+                </button>
+
+            </div>
+
+
+            {/* فرم اطلاعات */}
+            <div className="flex flex-col gap-5">
+
+                {/* نام و نام خانوادگی */}
+                <div className="flex flex-col gap-2">
+                    <label className="text-sm !font-semibold">
+                        نام و نام خانوادگی
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="نام و نام خانوادگی را وارد کنید"
+                        className="w-full h-[50px] border border-[#DFEAF2] rounded-xl px-4 outline-none text-right focus:border-[#0088FF] !font-semibold"
+                    />
                 </div>
+
+
+                {/* شماره موبایل */}
+                <div className="flex flex-col gap-2">
+                    <label className="text-sm !font-semibold">
+                        شماره موبایل
+                    </label>
+
+                    <input
+                        type="tel"
+                        placeholder="شماره موبایل را وارد کنید"
+                        className="w-full h-[50px] border border-[#DFEAF2] rounded-xl px-4 outline-none text-right focus:border-[#0088FF] !font-semibold"
+                    />
+                </div>
+
+
+                {/* کد پرسنلی */}
+                <div className="flex flex-col gap-2">
+                    <label className="text-sm !font-semibold">
+                        کد پرسنلی
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="کد پرسنلی را وارد کنید"
+                        className="w-full h-[50px] border border-[#DFEAF2] rounded-xl px-4 outline-none text-right focus:border-[#0088FF] !font-semibold"
+                    />
+                </div>
+
+
+                {/* رمز عبور */}
+                <div className="flex flex-col gap-2">
+                    <label className="text-sm !font-semibold">
+                        رمز عبور
+                    </label>
+
+                    <input
+                        type="password"
+                        placeholder="رمز عبور را وارد کنید"
+                        className="w-full h-[50px] border border-[#DFEAF2] rounded-xl px-4 outline-none text-right focus:border-[#0088FF] !font-semibold"
+                    />
+                </div>
+
+
+                {/* دکمه ثبت */}
+                <button
+                    type="button"
+                    onClick={() => setShowModal(false)}
+                    className="w-full h-[50px] bg-[#0088FF] text-white rounded-xl font-semibold text-lg mt-3 hover:bg-[#0075DB] transition !font-semibold"
+                >
+                    ثبت ادمین
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+)}
             </div>
             <div className="flex gap-5 justify-end mr-10 mt-5">
                 <button className="w-[140px] h-[41px] border border-[#0088FF] rounded-4xl !font-semibold text-lg">فیلتر</button>
